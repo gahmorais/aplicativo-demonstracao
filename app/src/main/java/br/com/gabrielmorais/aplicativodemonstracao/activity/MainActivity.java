@@ -1,13 +1,18 @@
 package br.com.gabrielmorais.aplicativodemonstracao.activity;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
@@ -40,5 +45,11 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController( this, R.id.navHostFragment );
         NavigationUI.setupWithNavController( navigationView, navController );
 
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
+                toolbar.setTitle( destination.getLabel() );
+            }
+        });
     }
 }

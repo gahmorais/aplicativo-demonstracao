@@ -6,10 +6,13 @@
 
     <fragment
         android:id="@+id/perfil"
-        android:name="br.com.gabrielmorais.aplicativodemonstracao.fragments.PerfilUsuario"
-        android:label="PerfilUsuario" />
+        android:name="br.com.gabrielmorais.aplicativodemonstracao.fragments.PerfilUsuarioFragment"
+        android:label="Perfil" />
+
     <fragment
         android:id="@+id/catalogoProdutos"
-        android:name="br.com.gabrielmorais.aplicativodemonstracao.fragments.CatalogoProdutos"
-        android:label="CatalogoProdutos" />
+        android:name="br.com.gabrielmorais.aplicativodemonstracao.fragments.CatalogoProdutosFragment"
+        android:label="Catalogo de produtos" />
+
+
 </navigation>

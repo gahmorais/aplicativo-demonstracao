@@ -20,7 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import br.com.gabrielmorais.aplicativodemonstracao.R;
 
-public class PerfilUsuario extends Fragment {
+public class PerfilUsuarioFragment extends Fragment {
 
     @Nullable
     @Override
